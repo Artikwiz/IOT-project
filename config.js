@@ -49,8 +49,7 @@ var config = {
                 height: "100px" //Optional. Default: 100px
             }
         }
-        }
-	]
+    ]
 
 };
 
