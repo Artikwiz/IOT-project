@@ -37,7 +37,56 @@ var config = {
             module: "clock",
             position: "top_left"
         },
-
+        {
+            module: "calendar",
+            header: "US Holidays",
+            position: "top_left",
+            config: {
+                calendars: [
+                    {
+                        symbol: "calendar-check-o ",
+                        url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+                    }
+                ]
+            }
+        },
+        {
+            module: "compliments",
+            position: "lower_third"
+        },
+        {
+            module: "currentweather",
+            position: "top_right",
+            config: {
+                location: "New York",
+                locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
+                appid: "YOUR_OPENWEATHER_API_KEY"
+            }
+        },
+        {
+            module: "weatherforecast",
+            position: "top_right",
+            header: "Weather Forecast",
+            config: {
+                location: "New York",
+                locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
+                appid: "YOUR_OPENWEATHER_API_KEY"
+            }
+        },
+        {
+            module: "newsfeed",
+            position: "bottom_bar",
+            config: {
+                feeds: [
+                    {
+                        title: "New York Times",
+                        url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+                    }
+                ],
+                showSourceTitle: true,
+                showPublishDate: true
+            }
+        },
         {
             module: 'MMM-iFrame',
             position: 'bottom_bar',	// This can be any of the regions.
@@ -48,7 +97,7 @@ var config = {
                 width: "100%", // Optional. Default: 100%
                 height: "100px" //Optional. Default: 100px
             }
-        }
+        },
     ]
 
 };
